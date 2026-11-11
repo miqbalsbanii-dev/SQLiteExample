@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent" tools:context=".MainActivity" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCariNIM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="16dp">
+
+            <LinearLayout android:id="@+id/llCariNIM" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+
+                <EditText android:autofillHints="" android:hint="@string/masukan_nama" android:id="@+id/etNama" android:inputType="textPersonName" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="0dp" android:minHeight="48dp"/>
+
+                <ImageButton android:contentDescription="@string/cari_mahasiswa" android:id="@+id/btnCari" android:layout_height="wrap_content" android:layout_width="60dp" android:minHeight="48dp" android:src="@drawable/baseline_person_search_24"/>
+
+            </LinearLayout>
+
+            <TextView android:id="@+id/tvHasilPencarian" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/informasi_hasil_pencarian" android:textAlignment="center" android:textSize="16sp" android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cvCariNIM"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStudents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_list_student" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnTambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/tambah"
+        android:src="@drawable/baseline_add_24"
+        app:fabSize="normal" />
+
+</RelativeLayout>

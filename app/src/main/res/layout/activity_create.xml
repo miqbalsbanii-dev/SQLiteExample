@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent" tools:context=".CreateActivity" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView android:id="@+id/tvJudul" android:layout_below="@+id/toolbar" android:layout_centerHorizontal="true" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:layout_width="wrap_content" android:text="@string/tambah_mahasiswa" android:textSize="25sp" android:textStyle="bold"/>
+
+    <TextView android:id="@+id/tvNIM" android:layout_below="@+id/tvJudul" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginTop="30dp" android:layout_width="wrap_content" android:text="@string/nim" android:textStyle="bold"/>
+
+    <EditText android:autofillHints="" android:hint="@string/masukan_nim" android:id="@+id/etNIM" android:inputType="number" android:layout_below="@+id/tvNIM" android:layout_height="wrap_content" android:layout_marginEnd="16dp" android:layout_marginStart="16dp" android:layout_width="match_parent" android:minHeight="48dp"/>
+
+    <TextView android:id="@+id/tvNama" android:layout_below="@+id/etNIM" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginTop="10dp" android:layout_width="wrap_content" android:text="@string/nama" android:textStyle="bold"/>
+
+    <EditText android:autofillHints="" android:hint="@string/masukan_nama" android:id="@+id/etNama" android:inputType="textPersonName" android:layout_below="@+id/tvNama" android:layout_height="wrap_content" android:layout_marginEnd="16dp" android:layout_marginStart="16dp" android:layout_width="match_parent" android:minHeight="48dp"/>
+
+    <TextView android:id="@+id/tvUmur" android:layout_below="@+id/etNama" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginTop="10dp" android:layout_width="wrap_content" android:text="@string/umur" android:textStyle="bold"/>
+
+    <EditText android:autofillHints="" android:hint="@string/masukan_umur" android:id="@+id/etUmur" android:inputType="number" android:layout_below="@+id/tvUmur" android:layout_height="wrap_content" android:layout_marginEnd="16dp" android:layout_marginStart="16dp" android:layout_width="match_parent" android:minHeight="48dp"/>
+
+    <Button android:id="@+id/btnSimpan" android:layout_alignParentBottom="true" android:layout_height="wrap_content" android:layout_margin="16dp" android:layout_width="match_parent" android:text="@string/simpan"/>
+
+</RelativeLayout>
